@@ -77,6 +77,16 @@
     padding-top: 160px;
     padding-bottom: 64px;
 
+    &--v2 {
+      padding-top: 80px;
+
+      .contact-us {
+        &__text {
+          margin-bottom: 50px;
+        }
+      }
+    }
+
     &__title {
       max-width: none;
       margin-bottom: 16px;

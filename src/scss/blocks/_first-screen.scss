@@ -218,10 +218,22 @@
     }
 
     &--org-d {
+      padding-bottom: 130px;
+
       &::after {
-        right: 2%;
+        right: 5%;
         bottom: 0;
-        width: 66%;
+        width: 33%;
+      }
+
+      .first-screen {
+        &__title {
+          max-width: 320px;
+        }
+
+        &__text {
+          max-width: 300px;
+        }
       }
     }
 
@@ -256,6 +268,25 @@
 
   @media #{$mobile-landscape} {
     &--ind-donation {
+      padding-bottom: 303px;
+
+      &::after {
+        bottom: -25px;
+        width: 400px;
+      }
+
+      .first-screen {
+        &__title {
+          max-width: none;
+        }
+
+        &__text {
+          max-width: none;
+        }
+      }
+    }
+
+    &--org-d {
       padding-bottom: 303px;
 
       &::after {
