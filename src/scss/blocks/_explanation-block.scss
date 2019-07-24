@@ -1,0 +1,347 @@
+.explanation-block {
+  padding: 160px 0;
+  background-color: $brand-color;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    box-sizing: border-box;
+
+    &:first-child {
+      padding-right: 70px;
+    }
+
+    &:last-child {
+      padding-left: 15px;
+    }
+  }
+
+  &__title {
+    @include h2();
+    position: relative;
+    margin: 0;
+    font-family: $secondary-font;
+    font-weight: $bold;
+    color: $white;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-top: 89px;
+    // font-size: 32px;
+    // line-height: 48px;
+    @include responsive-font(32, 48);
+    font-weight: $bold;
+    color: $white;
+  }
+
+  &__text {
+    @include h4();
+    margin: 0;
+    color: rgba($white, 0.7);
+
+    &:not(:last-of-type) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__btn-wrapper,
+  &__btn {
+    margin-top: 43px;
+  }
+
+  &--first {
+    .explanation-block {
+      &__title {
+        @include h1();
+        padding-right: 20%;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: -130px;
+          right: 135px;
+          width: 183px;
+          height: 183px;
+          overflow: visible;
+
+          background-image: url('../img/pills1.png');
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: center;
+        }
+      }
+
+      &__text {
+        @include h5();
+      }
+    }
+  }
+
+  &--second {
+    padding: 170px 0;
+
+    .explanation-block {
+      &__column {
+        &:last-child {
+          padding-left: 125px;
+        }
+      }
+
+      &__title {
+        transform: translateY(-16px);
+      }
+
+      &__btn-wrapper {
+        position: relative;
+        > * {
+          position: relative;
+          z-index: 2;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 740px;
+          height: 658px;
+          top: -18px;
+          left: -180px;
+
+          background-image: url('../img/live-donation.png');
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: top left;
+        }
+      }
+    }
+  }
+
+  @media #{$lg} {
+    &--first {
+      .explanation-block {
+        &__title {
+          &::after {
+            right: 115px;
+            width: 150px;
+          }
+        }
+      }
+    }
+
+    &--second {
+      .explanation-block {
+        &__column {
+          &:last-child {
+            padding-left: 85px;
+          }
+        }
+      }
+    }
+
+    &__subtitle {
+      // font-size: 28px;
+    }
+  }
+
+  @media #{$md} {
+    &--first {
+      .explanation-block {
+        &__title {
+          &::after {
+            right: 65px;
+            width: 135px;
+          }
+        }
+      }
+    }
+
+    &--second {
+      .explanation-block {
+        &__wrapper {
+          flex-wrap: wrap;
+        }
+
+        &__column {
+          width: 100%;
+
+          &:last-child {
+            padding-left: 45%;
+          }
+        }
+
+        &__btn-wrapper {
+          &::after {
+            width: 460px;
+            top: -10px;
+            left: -165px;
+            background-image: url('../img/live-donation-tablet.png');
+          }
+        }
+      }
+    }
+
+    &__subtitle {
+      margin-top: 50px;
+      // font-size: 26px;
+      // line-height: 42px;
+    }
+
+    &__text {
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media #{$sm} {
+    padding: 105px 0;
+
+    &--first {
+      .explanation-block {
+        &__title {
+          &::after {
+            right: -25px;
+            width: 120px;
+          }
+        }
+      }
+    }
+
+    &--second {
+      .explanation-block {
+        &__column {
+          &:last-child {
+            padding-left: 40%;
+          }
+        }
+
+        &__btn-wrapper {
+          margin-top: 25px;
+
+          > * {
+            padding: 10px;
+          }
+
+          &::after {
+            width: 400px;
+            left: -145px;
+          }
+        }
+      }
+    }
+
+    &__subtitle {
+      margin-top: 40px;
+      // font-size: 21px;
+      // line-height: 35px;
+    }
+
+    &__text {
+      &:not(:last-of-type) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  @media #{$xs} {
+    padding-top: 79px;
+    padding-bottom: 162px;
+
+    &--first {
+      padding: 72px 0;
+
+      .explanation-block {
+        &__title {
+          &::after {
+            width: 98px;
+            right: -30px;
+            top: 21px;
+          }
+        }
+
+        &__subtitle {
+          min-height: 66px;
+        }
+
+        &__text {
+          padding-left: 3px;
+        }
+      }
+    }
+
+    &--second {
+      .explanation-block {
+        &__column {
+          &:last-child {
+            position: relative;
+            padding-bottom: 80px;
+          }
+        }
+
+        &__text {
+          min-height: 44px;
+        }
+
+        &__btn-wrapper {
+          position: absolute;
+          top: 43px;
+          right: 13%;
+
+          &::after {
+            top: -13px;
+            left: -114px;
+            width: 313px;
+            height: 486px;
+            background-image: url('../img/live-donation-mobile.png');
+          }
+
+          > * {
+            box-sizing: border-box;
+            width: 180px;
+            padding: 6px 10px;
+          }
+        }
+
+        &__column {
+          &:last-child {
+            padding-left: 0;
+          }
+        }
+
+        &__title {
+          margin-bottom: 13px;
+        }
+      }
+    }
+
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__column {
+      width: 100%;
+
+      &:first-child {
+        padding-right: 0;
+      }
+
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+
+    &__subtitle {
+      max-width: 67%;
+      margin-top: 34px;
+      margin-bottom: 36px;
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+}

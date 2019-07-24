@@ -1,0 +1,73 @@
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: max-content;
+  padding: 17px 28px;
+  font-family: $main-font;
+  // font-size: 22px;
+  // line-height: 32px;
+  @include responsive-font(22, 32);
+  font-weight: $bold;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  background-color: $brand-color;
+  border: 2px solid $brand-color;
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+  appearance: none;
+
+  &[disabled],
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:hover:not([disabled]) {
+    filter: brightness(1.1);
+  }
+
+  &:active {
+    filter: brightness(1.5);
+  }
+
+  &--transparent {
+    color: $brand-color;
+    border: 2px solid $brand-color;
+    background-color: transparent;
+
+    &:hover:not([disabled]) {
+      color: $white;
+      background-color: $brand-color;
+    }
+  }
+
+  &--white {
+    color: $brand-color;
+    background-color: $white;
+  }
+
+  &--big {
+    padding: 22px 52px;
+  }
+
+  &--small {
+    padding: 14px 30px;
+  }
+
+  @media #{$md} {
+    padding: 12px 24px;
+    font-size: 18px;
+
+    &--big {
+      padding: 16px 40px;
+    }
+  }
+
+  @media #{$xs} {
+    padding: 11px 21px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

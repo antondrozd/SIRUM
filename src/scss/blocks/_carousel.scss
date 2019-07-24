@@ -1,0 +1,22 @@
+.carousel {
+  &__wrapper {
+    width: 857px;
+    margin: 0 auto;
+    text-align: center;
+
+    outline: 2px solid red;
+    height: 452px;
+  }
+
+  &__items {
+    @include ul-reset();
+  }
+
+  &--impact {
+    .carousel {
+      &__wrapper {
+        @include decorative-img('../img/impact.png', 426px, 404px, 37%, -255px);
+      }
+    }
+  }
+}

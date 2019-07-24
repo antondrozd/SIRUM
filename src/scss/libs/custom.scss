@@ -1,0 +1,139 @@
+.custom-select {
+  display: block;
+  width: 100%;
+
+  &__dropdown {
+    border-color: #c3c9d5;
+  }
+
+  &__option {
+    padding: 10px 20px;
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 32px;
+    color: #919aad;
+
+    &--value {
+      padding: 15px 20px;
+      padding-right: 55px;
+
+      border: 1px solid #c3c9d5;
+      border-radius: 5px;
+
+      &::after {
+        right: 17px;
+        border-width: 10px;
+        border-bottom-width: 0;
+        border-top-color: #919aad;
+        border-bottom-color: #919aad;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__input {
+    height: 60px;
+    padding: 10px 20px;
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 32px;
+    color: $gray-200;
+    border-color: #c3c9d5;
+  }
+
+  @media #{$md} {
+    &__option {
+      font-size: 18px;
+
+      &--value {
+        padding: 10px 20px;
+        padding-right: 50px;
+      }
+    }
+  }
+
+  @media #{$xs} {
+    &__option {
+      &--value {
+        padding: 5px 15px;
+      }
+    }
+  }
+}
+
+.check-donation__select-state + .custom-select {
+  margin-bottom: 45px;
+
+  @media #{$md} {
+    margin-bottom: 30px;
+  }
+
+  @media #{$xs} {
+    margin-bottom: 21px;
+  }
+}
+
+.swipeshow {
+  width: 100%;
+  min-height: 374px;
+  margin: 0 auto;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: -82px;
+  transform: translateX(-50%);
+
+  .dot-item {
+    width: 18px;
+    height: 18px;
+    margin: 6px;
+    background-color: #eceaea;
+    border-radius: 50%;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover:not(.active) {
+      background-color: rgba(#2291f8, 0.2);
+    }
+
+    &.active {
+      background-color: #2291f8;
+    }
+  }
+
+  @media #{$sm} {
+    left: 6vw;
+    bottom: 50px;
+  }
+
+  @media #{$xs} {
+    left: 8vw;
+    bottom: -97px;
+    display: flex;
+    flex-direction: column;
+
+    .dot-item {
+      width: 20px;
+      height: 20px;
+      margin: 16px 6px;
+    }
+  }
+}
+
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+  display: none;
+}
+
+.jvectormap-container {
+  svg {
+    g {
+      g {
+        cursor: pointer;
+      }
+    }
+  }
+}

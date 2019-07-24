@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: $main-font;
+  font-size: $main-font-size;
+  font-weight: $regular;
+  background-color: $body-color;
+  color: $gray-200;
+}
+
+img {
+  max-width: 100%;
+}
+
+b {
+  font-weight: $bold;
+}
+
+h1, h2 {
+  font-weight: $medium;
+}
+
+// @media (min-width: 1600px) {
+//   body {
+//     position: relative;
+//     width: 1600px;
+//     margin: 0 auto;
+//   }
+// }

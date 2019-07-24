@@ -1,0 +1,93 @@
+.call-to-action-block {
+  padding-top: 153px;
+  padding-bottom: 160px;
+  background-color: #eef8ff;
+
+  &__wrapper {
+    text-align: center;
+    @include decorative-img(
+      '../img/positive.png',
+      590px,
+      462px,
+      '',
+      '',
+      -286px,
+      -40px
+    );
+  }
+
+  &__title {
+    @include h3();
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    font-family: $secondary-font;
+    line-height: 98px;
+
+    @include decorative-img('../img/pills4.png', 267px, 172px, -26px, -188px);
+  }
+
+  &__text {
+    @include h4();
+    margin: 0;
+    margin-bottom: 82px;
+  }
+
+  @media #{$lg} {
+    &__wrapper {
+      &::after {
+        width: 480px;
+      }
+    }
+  }
+
+  @media #{$md} {
+    &__wrapper {
+      &::after {
+        width: 420px;
+        bottom: -320px;
+        left: -70px;
+      }
+    }
+
+    &__title {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media #{$sm} {
+    &__wrapper {
+      &::after {
+        width: 360px;
+        bottom: -360px;
+        left: -110px;
+      }
+    }
+  }
+
+  @media #{$xs} {
+    padding-top: 46px;
+    padding-bottom: 122px;
+
+    &__wrapper {
+      &::after {
+        width: 282px;
+        height: 221px;
+        bottom: -224px;
+        left: -24px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    &__text {
+      text-align: left;
+      margin-bottom: 33px;
+    }
+  }
+}

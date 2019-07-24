@@ -1,0 +1,12 @@
+.form-fields-group {
+  display: flex;
+
+  &__item {
+    min-width: 100px;
+    flex-grow: 1;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+}

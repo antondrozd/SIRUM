@@ -1,0 +1,53 @@
+.modal {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 557px;
+  padding: 28px 32px;
+  background-color: $white;
+  box-shadow: 0px 3px 13px rgba(92, 92, 92, 0.38);
+  z-index: 3;
+
+  &--show {
+    display: block;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
+
+  &__form {
+    margin-bottom: 70px;
+  }
+
+  @media #{$sm} {
+    top: 111px;
+    width: 84%;
+    padding: 25px 13px;
+
+    &__close-btn {
+      right: 13px;
+    }
+
+    &__form {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  opacity: 0.6;
+  z-index: 2;
+}
