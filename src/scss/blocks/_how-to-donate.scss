@@ -3,7 +3,6 @@
 
   &__wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -114,6 +113,10 @@
 
     @media #{$xs} {
       padding-top: 0;
+
+      &__wrapper {
+        flex-wrap: wrap;
+      }
 
       &__column {
         &:first-child {

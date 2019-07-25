@@ -51,9 +51,7 @@ $(document).ready(function() {
       $select.val(...selectedRegions)
       $select.customSelect('reset')
     },
-    onViewportChange: function() {
-      
-    }
+    onViewportChange: function() {}
   })
 
   const mapObject = $('.how-to-donate__map').vectorMap('get', 'mapObject')
@@ -64,4 +62,6 @@ $(document).ready(function() {
     mapObject.clearSelectedRegions()
     mapObject.setSelectedRegions(value)
   })
+
+  $(window).on('resize', () => mapObject.updateSize())
 })
