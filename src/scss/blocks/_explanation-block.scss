@@ -131,7 +131,7 @@
         margin: 0 auto;
 
         &:last-of-type {
-          @include decorative-img('../img/pills6.png', 23%, 887px, -230px, 18%);
+          @include decorative-img('../img/pills6.png', 23%, 887px, -230px, -18%);
         }
       }
 
@@ -440,7 +440,7 @@
 
     &--ind-d {
       padding-bottom: 40px;
-      
+
       .explanation-block {
         &__wrapper {
           width: 100%;
