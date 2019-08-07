@@ -562,7 +562,7 @@ h1, h2 {
           content: '';
           position: absolute;
           top: -230px;
-          right: 18%;
+          right: -18%;
           width: 23%;
           height: 887px;
           background-image: url("../img/pills6.png");
