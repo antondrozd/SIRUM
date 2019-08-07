@@ -2,8 +2,157 @@
   padding-top: 140px;
   padding-bottom: 80px;
 
+  &--ind-d {
+    .donation-steps {
+      &__wrapper {
+        @include decorative-img(
+          '../img/pills5.png',
+          194px,
+          162px,
+          '',
+          '',
+          5px,
+          -150px
+        );
+      }
+
+      &__list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding-left: 10%;
+      }
+
+      &__item-title {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          font-size: 22px;
+          line-height: 40px;
+          font-family: $main-font;
+          color: $brand-color;
+          border: 1px solid rgba($brand-color, 0.21);
+          border-radius: 50%;
+        }
+      }
+
+      &__item {
+        box-sizing: border-box;
+        width: 39%;
+        text-align: left;
+        margin-bottom: 120px;
+        padding-left: 55px;
+
+        &--step-1 {
+          .donation-steps {
+            &__item-title {
+              &::before {
+                content: '1';
+              }
+            }
+          }
+
+          @include decorative-img(
+            '../img/ind-d-step-1.png',
+            218px,
+            227px,
+            0,
+            '',
+            '',
+            -72px
+          );
+        }
+        &--step-2 {
+          .donation-steps {
+            &__item-title {
+              &::before {
+                content: '2';
+              }
+            }
+          }
+
+          @include decorative-img(
+            '../img/ind-d-step-2.png',
+            200px,
+            187px,
+            51px,
+            '',
+            '',
+            -46px
+          );
+        }
+        &--step-3 {
+          .donation-steps {
+            &__item-title {
+              &::before {
+                content: '3';
+              }
+            }
+          }
+
+          @include decorative-img(
+            '../img/ind-d-step-3.png',
+            328px,
+            304px,
+            -74px,
+            '',
+            '',
+            -150px
+          );
+        }
+        &--step-4 {
+          .donation-steps {
+            &__item-title {
+              &::before {
+                content: '4';
+              }
+            }
+          }
+
+          @include decorative-img(
+            '../img/ind-d-step-4.png',
+            227px,
+            233px,
+            0,
+            '',
+            '',
+            0
+          );
+        }
+      }
+
+      &__item-text {
+        @include h6();
+      }
+    }
+  }
+
   &__wrapper {
     text-align: center;
+  }
+
+  &__title {
+    @include h2();
+    margin: 0;
+    margin-bottom: 26px;
+    font-family: $secondary-font;
+  }
+
+  &__text {
+    @include h4();
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 27px;
   }
 
   &__list {
@@ -75,31 +224,61 @@
     }
   }
 
+  // @media #{$md} {
+  //   &__item {
+  //     padding-top: 230px;
+
+  //     &--step-1 {
+  //       &::after {
+  //         width: 200px;
+  //       }
+  //     }
+
+  //     &--step-2 {
+  //       &::after {
+  //         width: 180px;
+  //       }
+  //     }
+
+  //     &--step-3 {
+  //       &::after {
+  //         width: 150px;
+  //       }
+  //     }
+  //   }
+  // }
+
   @media #{$md} {
-    &__item {
-      padding-top: 230px;
-
-      &--step-1 {
-        &::after {
-          width: 200px;
+    &--ind-d {
+      .donation-steps {
+        &__wrapper {
+          &::after {
+            bottom: -75px;
+            left: -90px;
+            width: 110px;
+          }
         }
-      }
 
-      &--step-2 {
-        &::after {
-          width: 180px;
+        &__item {
+          padding-top: 200px;
+          margin-bottom: 80px;
+
+          &::after {
+            top: 10px;
+            left: 55px;
+            right: auto;
+            width: 170px;
+            height: 170px;
+            transform: none;
+          }
         }
-      }
 
-      &--step-3 {
-        &::after {
-          width: 150px;
+        &__list {
+          padding-left: 0;
         }
       }
     }
-  }
 
-  @media #{$md} {
     &__item {
       padding-top: 170px;
 
@@ -141,6 +320,28 @@
   @media #{$xs} {
     padding-top: 35px;
     padding-bottom: 18px;
+
+    &--ind-d {
+      .donation-steps {
+        &__wrapper {
+          &::after {
+            display: none;
+          }
+        }
+        
+        &__item {
+          width: 100%;
+
+          &:last-child {
+            margin-bottom: 80px;
+          }
+        }
+
+        &__item-text {
+          padding: 0;
+        }
+      }
+    }
 
     &__list {
       flex-wrap: wrap;

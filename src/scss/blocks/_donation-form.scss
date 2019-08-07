@@ -1,0 +1,12 @@
+.donation-form {
+  padding-top: 131px;
+  padding-bottom: 160px;
+  background-color: #eef8ff;
+
+  &__title {
+    @include h2();
+    margin: 0;
+    margin-bottom: 46px;
+    font-family: $secondary-font;
+  }
+}

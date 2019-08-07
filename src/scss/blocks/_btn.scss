@@ -48,6 +48,11 @@
     background-color: $white;
   }
 
+  &--transparent-white {
+    color: $white;
+    border-color: $white;
+  }
+
   &--big {
     padding: 22px 52px;
   }
