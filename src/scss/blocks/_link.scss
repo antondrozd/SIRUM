@@ -1,9 +1,0 @@
-.link {
-  @include a-reset();
-  font-weight: $bold;
-  color: $brand-color !important;
-
-  &--underlined {
-    text-decoration: underline !important;
-  }
-}
