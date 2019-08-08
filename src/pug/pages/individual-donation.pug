@@ -45,30 +45,129 @@ block main
               h4.donation-steps__item-title Lorem Ipsum
               p.donation-steps__item-text Dispose of any medications that were not eligible for donation by following <a class="link link--underlined" href="#">these&nbsp;instructions</a>
           p.donation-steps__text <b>Fill out the form below to get started.</b> Because SIRUM and our partners are non-profits, your donation may be eligible for a tax deduction. Thank you for supporting those in need.
-    //- .donation-form
-    //-   .main-content__wrapper
-    //-     .donation-form__wrapper
-    //-     h2.donation-form__title Ready to donate?
-    //-     p.donation-form__subtitle Donated medicine must meet ALL of these criteria
-    //-     form.form(action="/" method="post")
-    //-       .form__wrapper
-    //-         .form__column
-    //-           .form-fields-group
-    //-             .form-fields-group__item.form-field
-    //-               input(type="text" name="name" placeholder="Name*" required)
-    //-             .form-fields-group__item.form-field
-    //-               input(type="email" name="email" placeholder="Email*" required)
-    //-           .form-field
-    //-             input(type="text" name="organization" placeholder="Organization name")
-    //-           .form-field
-    //-             input(type="text" name="state" placeholder="State")
-    //-           .form-field
-    //-             input(type="text" name="info-from" placeholder="How’d you learn about us?")
-    //-         .form__column
-    //-           .form-field.form-field--auto-height
-    //-             textarea(name="message" placeholder="Message*" required)
-    //-           button(type="submit").form__btn.btn Send
-    div(style="color: red; border: 1px solid red; text-align: center") Form is going to be here
+    .donation-form.donation-form--ind-d#donor-form
+      .main-content__wrapper
+        .donation-form__wrapper
+        form.form(action="/" method="post")
+          fieldset.donation-form__section.donation-form__section--checkboxes
+            .form__wrapper
+              h2.donation-form__title Ready to donate?
+              p.donation-form__subtitle Donated medicine must meet ALL <br>of these criteria
+              label.form-field.form-field--checkbox
+                input(type="checkbox" required checked)
+                span.form-field__indicator
+                | Is not a controlled substance (no narcotics or opiods)
+              label.form-field.form-field--checkbox
+                input(type="checkbox" required)
+                span.form-field__indicator
+                | Will not expire for at least 3 months
+              label.form-field.form-field--checkbox
+                input(type="checkbox" required)
+                span.form-field__indicator
+                | Is in sealed packaging (standard amber vials not eligible)
+              label.form-field.form-field--checkbox
+                input(type="checkbox" required)
+                span.form-field__indicator
+                | Does not require refrigeration
+              label.form-field.form-field--checkbox
+                input(type="checkbox" required)
+                span.form-field__indicator
+                | Understand there is a $10+ shipping charge
+          fieldset.donation-form__section
+            .form__wrapper
+              .form__column
+                label(for="name").form__label My Name
+                .form-fields-group
+                  .form-fields-group__item.form-field.form-field--no-mb
+                    input(type="text" name="name" id="name" placeholder="First")
+                  .form-fields-group__item.form-field
+                    input(type="text" name="lastname" placeholder="Last")
+                label(for="email").form__label.form__label--auto-mt My Email
+                .form-field
+                    input(type="email" name="email" id="email" placeholder="Email")
+              .form__column
+                label(for="address").form__label My Address
+                .form-fields-group
+                  .form-fields-group__item.form-field.form-field--small-mb
+                    input(type="text" name="address1" id="address" placeholder="Address line1")
+                  .form-fields-group__item.form-field.form-field--small-mb
+                    input(type="text" name="address2" placeholder="Address line2")
+                .form-fields-group
+                  .form-fields-group__item.form-field.form-field--small-mb
+                    input(type="text" name="city" placeholder="City")
+                  .form-fields-group__item.form-field.form-field--small-mb
+                    input(type="text" name="state" placeholder="State")
+                .form-field.form-field--short
+                  input(type="text" name="zip" placeholder="Zip code")
+          fieldset.donation-form__section.donation-form__section--list
+            .form__wrapper
+              legend.donation-form__subtitle List of Donated Medicine
+              .form-fields-group.form-fields-group--long
+                .form-fields-group__item
+                  .form-field
+                    label(for="drug-code").form__label.form__label--small National&nbsp;Drug&nbsp;Code
+                    input(type="text" name="drug-code" id="drug-code")
+                .form-fields-group__item
+                  .form-field
+                    label(for="ndc").form__label.form__label--small Formatted&nbsp;NDC
+                    input(type="text" name="ndc" id="ndc" disabled)
+                .form-fields-group__item
+                  .form-field
+                    label(for="drug-name").form__label.form__label--small Drug&nbsp;Name&nbsp;&&nbsp;Strength
+                    input(type="text" name="drug-name" id="drug-name")
+                .form-fields-group__item
+                  .form-field
+                    label(for="expiration-date").form__label.form__label--small Expiration&nbsp;Date
+                    input(type="text" name="expiration-date" id="expiration-date" placeholder="MM/DD/YYYY")
+                .form-fields-group__item
+                  .form-field
+                    label(for="qty-type").form__label.form__label--small Qty&nbsp;Type
+                    select(name="qty-type" id="qty-type")
+                      option(value="1") 1
+                      option(value="2") 2
+                      option(value="3") 3
+                .form-fields-group__item
+                  .form-field
+                    label(for="quantity").form__label.form__label--small Quantity
+                    input(type="text" name="quantity" id="quantity")
+              button(type="button").donation-form__btn.btn.btn--transparent Add item
+          fieldset.donation-form__section.donation-form__section--radio
+            .form__wrapper.form__wrapper--small
+              .form__column
+                label.form__label Shipping Cost: How much <br>does the donation weigh?
+                label.form-field.form-field--radio
+                  input(type="radio" name="shipping" checked)
+                  span.form-field__indicator
+                  | 0 - 10lbs - $10.00
+                label.form-field.form-field--radio
+                  input(type="radio" name="shipping")
+                  span.form-field__indicator
+                  | 11 - 20lbs - $25.00
+                label.form-field.form-field--radio
+                  input(type="radio" name="shipping")
+                  span.form-field__indicator
+                  | 20lbs+
+              .form__column
+                label.form__label Include a tax-deductible donation <br>to support SIRUM's work?
+                label.form-field.form-field--radio
+                  input(type="radio" name="tax-deductible" checked)
+                  span.form-field__indicator
+                  | $5
+                label.form-field.form-field--radio
+                  input(type="radio" name="tax-deductible")
+                  span.form-field__indicator
+                  | $10
+                label.form-field.form-field--radio
+                  input(type="radio" name="tax-deductible")
+                  span.form-field__indicator
+                  | $25
+                label.form-field.form-field--radio
+                  input(type="radio" name="tax-deductible")
+                  span.form-field__indicator
+                  | No Thanks
+          p.donation-form__text Once complete, we will email you a tax receipt, donation manifest, and a shipping label. 
+          a(href="tel:6504887434").link.donation-form__text Questions? Call 650-488-7434
+          button(type="submit").donation-form__btn.donation-form__btn--submit.btn Submit
     .explanation-block.explanation-block--ind-d-last
       .main-content__wrapper
         .explanation-block__wrapper

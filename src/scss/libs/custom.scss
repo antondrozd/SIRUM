@@ -52,6 +52,14 @@
     }
   }
 
+  @media #{$sm} {
+    &__option {
+      &--value {
+        padding: 6px 16px;
+      }
+    }
+  }
+
   @media #{$xs} {
     &__option {
       &--value {

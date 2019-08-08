@@ -1,12 +1,38 @@
 .form-fields-group {
   display: flex;
 
+  &--long {
+    margin-bottom: 46px;
+    
+    .form-fields-group {
+      &__item {
+        min-width: 115px;
+      }
+    }
+  }
+
   &__item {
     min-width: 100px;
     flex-grow: 1;
 
     &:not(:last-child) {
       margin-right: 12px;
+    }
+  }
+
+  @media #{$sm} {
+    &--long {
+      flex-wrap: wrap;
+
+      .form-fields-group {
+        &__item {
+          width: 33.33%;
+          
+          &:nth-child(even) {
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 }

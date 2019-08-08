@@ -328,17 +328,34 @@
             display: none;
           }
         }
-        
+
         &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+          text-align: center;
 
           &:last-child {
             margin-bottom: 80px;
+          }
+
+          &::after {
+            left: 50%;
+            transform: translateX(-50%);
           }
         }
 
         &__item-text {
           padding: 0;
+        }
+
+        &__item-title {
+          &::before {
+            display: none;
+          }
         }
       }
     }

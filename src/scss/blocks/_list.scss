@@ -5,6 +5,7 @@
     @include h6();
     position: relative;
     padding-left: 15px;
+    text-align: left;
 
     &::before {
       content: '';

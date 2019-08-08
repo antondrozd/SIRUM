@@ -6,7 +6,93 @@
   &__title {
     @include h2();
     margin: 0;
-    margin-bottom: 46px;
+    margin-bottom: 59px;
     font-family: $secondary-font;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 58px;
+    padding: 0;
+    width: 100%;
+    @include responsive-font(32, 50);
+    font-weight: $bold;
+  }
+
+  &__section {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &--checkboxes {
+      padding-right: 40%;
+      margin-bottom: 68px;
+
+      @include decorative-img('../img/ind-d-form.png', 51.6%, 477px, 25px, -7%);
+    }
+
+    &--list {
+      margin-top: 150px;
+      margin-bottom: 88px;
+
+      .donation-form {
+        &__subtitle {
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    &--radio {
+      margin-bottom: -31px;
+    }
+  }
+
+  &__text {
+    @include h5();
+    margin: 0;
+    margin-bottom: 11px;
+    text-align: center;
+  }
+
+  &__btn {
+    min-width: 200px;
+    margin: 0 auto;
+
+    &--submit {
+      margin-top: 90px;
+    }
+  }
+
+  @media #{$sm} {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    &__section {
+      &--checkboxes {
+        padding-right: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &--list {
+        margin-top: 80px;
+      }
+
+      &--radio {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__subtitle {
+      br {
+        display: none;
+      }
+    }
+
+    &__btn {
+      margin-top: 40px;
+    }
   }
 }
