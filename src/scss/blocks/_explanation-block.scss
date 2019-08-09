@@ -162,6 +162,8 @@
   }
 
   &--ind-d-last {
+    padding-top: 148px;
+    padding-bottom: 111px;
     background-color: $white;
 
     .explanation-block {
@@ -196,7 +198,7 @@
       }
 
       &__text {
-        @include h6();
+        @include responsive-font(20, 46);
         padding-right: 23%;
         color: $gray-200;
       }

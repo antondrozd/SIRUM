@@ -18,7 +18,7 @@ block main
             p.explanation-block__text If you want to help our mission directly, SIRUM accepts monetary donations
             a(href="#").explanation-block__btn.btn.btn--white Donate money
           .explanation-block__column
-            p.explanation-block__text If you’re an organization wanting to donate, select learn more below
+            p.explanation-block__text If you’re an organization wanting to donate, select <b>learn more</b> below
             a(href="#").explanation-block__btn.btn.btn--transparent-white Learn more
     .donation-steps.donation-steps--ind-d
       .main-content__wrapper
@@ -167,6 +167,13 @@ block main
                   | No Thanks
           p.donation-form__text Once complete, we will email you a tax receipt, donation manifest, and a shipping label. 
           a(href="tel:6504887434").link.donation-form__text Questions? Call 650-488-7434
+          .donation-form__conclusion
+            .donation-form__conclusion-inner
+              .donation-form__conclusion-item
+                b.donation-form__conclusion-label Payment
+              .donation-form__conclusion-item
+                span.donation-form__conclusion-label Amount Due:
+                b.donation-form__conclusion-value $15.00
           button(type="submit").donation-form__btn.donation-form__btn--submit.btn Submit
     .explanation-block.explanation-block--ind-d-last
       .main-content__wrapper

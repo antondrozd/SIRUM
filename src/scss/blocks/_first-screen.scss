@@ -130,6 +130,12 @@
       height: 351px;
     }
 
+    &--ind-donation {
+      &::after {
+        bottom: -10px;
+      }
+    }
+
     &__title {
       margin-bottom: 28px;
 
