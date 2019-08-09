@@ -351,6 +351,8 @@ h1, h2 {
         left: auto;
         width: 312px;
         height: 351px; }
+      .first-screen--ind-donation::after {
+        bottom: -10px; }
       .first-screen__title {
         margin-bottom: 28px; }
         .first-screen__title::after {
@@ -617,6 +619,8 @@ h1, h2 {
       width: 70%;
       padding-right: 10%; }
   .explanation-block--ind-d-last {
+    padding-top: 148px;
+    padding-bottom: 111px;
     background-color: #fff; }
     .explanation-block--ind-d-last .explanation-block {
       padding-bottom: 113px; }
@@ -659,26 +663,22 @@ h1, h2 {
             font-size: 32px;
             line-height: 44px; } }
       .explanation-block--ind-d-last .explanation-block__text {
-        font-size: 22px;
-        line-height: 42px;
+        font-size: 20px;
+        line-height: 46px;
         padding-right: 23%;
         color: #3d4554; }
         @media (max-width: 1439px) {
           .explanation-block--ind-d-last .explanation-block__text {
-            font-size: 15.4px;
-            line-height: 29.4px; } }
+            font-size: 14px;
+            line-height: 32.2px; } }
         @media (max-width: 1199px) {
           .explanation-block--ind-d-last .explanation-block__text {
-            font-size: 14.3px;
-            line-height: 27.3px; } }
+            font-size: 13px;
+            line-height: 29.9px; } }
         @media (max-width: 991px) {
           .explanation-block--ind-d-last .explanation-block__text {
-            font-size: 13.2px;
-            line-height: 25.2px; } }
-        @media (max-width: 767px) {
-          .explanation-block--ind-d-last .explanation-block__text {
             font-size: 12px;
-            line-height: 22px; } }
+            line-height: 27.6px; } }
   @media (max-width: 1439px) {
     .explanation-block--first .explanation-block__title::after {
       right: 115px;
@@ -1480,7 +1480,7 @@ h1, h2 {
   .donation-steps--ind-d .donation-steps__item {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 39%;
+    width: 37.2%;
     text-align: left;
     margin-bottom: 120px;
     padding-left: 55px; }
@@ -2626,7 +2626,7 @@ h1, h2 {
 
 .donation-form {
   padding-top: 131px;
-  padding-bottom: 160px;
+  padding-bottom: 163px;
   background-color: #eef8ff; }
   .donation-form__title {
     font-size: 72px;
@@ -2722,6 +2722,38 @@ h1, h2 {
     margin: 0 auto; }
     .donation-form__btn--submit {
       margin-top: 90px; }
+  .donation-form__conclusion {
+    font-size: 24px;
+    line-height: 42px;
+    margin-top: 18px;
+    padding: 0 11.3%; }
+    @media (max-width: 1439px) {
+      .donation-form__conclusion {
+        font-size: 16.8px;
+        line-height: 29.4px; } }
+    @media (max-width: 1199px) {
+      .donation-form__conclusion {
+        font-size: 15.6px;
+        line-height: 27.3px; } }
+    @media (max-width: 991px) {
+      .donation-form__conclusion {
+        font-size: 14.4px;
+        line-height: 25.2px; } }
+    @media (max-width: 767px) {
+      .donation-form__conclusion {
+        font-size: 12px;
+        line-height: 22px; } }
+  .donation-form__conclusion-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgba(44, 46, 54, 0.1); }
+  .donation-form__conclusion-value {
+    margin-left: 15px; }
   @media (max-width: 991px) {
     .donation-form {
       padding-top: 80px;
