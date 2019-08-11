@@ -18,6 +18,11 @@
     &:not(:last-child) {
       margin-right: 12px;
     }
+
+    &--short {
+      min-width: auto;
+      max-width: 80px;
+    }
   }
 
   @media #{$sm} {

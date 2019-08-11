@@ -41,7 +41,7 @@
     }
 
     &--small {
-      @include responsive-font(20, 50);
+      @include responsive-font(19.2, 50);
       display: block;
       margin-bottom: 26px;
     }

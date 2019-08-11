@@ -1,15 +1,14 @@
-mixin header()
+mixin header(items)
   header.main-header
     .main-header__wrapper
       .main-header__logo
         include /blocks/logo
       .main-header__main-nav.main-nav
         ul.main-nav__list
-          li.main-nav__item
-            a(href="#") Donate Medicine
-          li.main-nav__item
-            a(href="#") Receive
-          li.main-nav__item
-            a(href="#").link.link--underlined Sign Up
-          li.main-nav__item
-            a(href="#") Sign In
+          each item in items
+            if (item.modifier)
+              li.main-nav__item
+                a(href="#").link(class="link--" + item.modifier)= item.name
+            else
+              li.main-nav__item
+                a(href="#")= item.name

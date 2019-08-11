@@ -131,12 +131,16 @@
     }
 
     &--ind-donation {
+      padding-bottom: 120px;
+
       &::after {
         bottom: -10px;
+        width: 500px;
       }
     }
 
     &__title {
+      max-width: 60%;
       margin-bottom: 28px;
 
       &::after {
@@ -148,9 +152,31 @@
     }
 
     &__text {
+      max-width: 55%;
       margin-bottom: 35px;
       font-size: 12px;
       line-height: 22px;
+    }
+  }
+
+  @media #{$mobile-landscape} {
+    &--ind-donation {
+      padding-bottom: 303px;
+      
+      &::after {
+        bottom: -25px;
+        width: 400px;
+      }
+
+      .first-screen {
+        &__title {
+          max-width: none;
+        }
+
+        &__text {
+          max-width: none;
+        }
+      }
     }
   }
 }

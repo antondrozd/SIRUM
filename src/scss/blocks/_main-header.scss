@@ -13,6 +13,10 @@
     display: none;
   }
 
+  &__main-nav {
+    min-width: 62%;
+  }
+
   @media #{$xs} {
     padding-top: 25px;
   }

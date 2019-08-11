@@ -3,6 +3,10 @@ extends /layouts/index
 append head
   title SIRUM
 
+block header
+  include /mixins/header
+  +header([{name: 'Donate Medicine'}, {name: 'Receive'}, {name: 'Sign Up', modifier: 'underlined'}, {name: 'Sign In'}])
+
 block main
   main.main-content
     .first-screen
