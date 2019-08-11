@@ -80,6 +80,12 @@
       left: 43%;
     }
 
+    &--ind-donation {
+      &::after {
+        left: calc(50% - 255px);
+      }
+    }
+
     &__title {
       &::after {
         top: -115px;
@@ -90,6 +96,12 @@
   @media #{$md} {
     &::after {
       left: 35%;
+    }
+
+    &--ind-donation {
+      &::after {
+        left: 25%;
+      }
     }
 
     &__title {
@@ -108,6 +120,13 @@
   @media #{$sm} {
     &::after {
       left: 25%;
+    }
+
+    &--ind-donation {
+      &::after {
+        left: 45%;
+        width: 450px;
+      }
     }
 
     &__title {
