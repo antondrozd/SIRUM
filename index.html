@@ -49,8 +49,8 @@
                 </svg></a></div>
             <div class="main-header__main-nav main-nav">
               <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="#">Donate Medicine</a></li>
-                <li class="main-nav__item"><a href="#">Receive</a></li>
+                <li class="main-nav__item"><a href="#">Organization Donation</a></li>
+                <li class="main-nav__item"><a href="#">Individual Donation</a></li>
                 <li class="main-nav__item"><a class="link link--underlined" href="#">Sign Up</a></li>
                 <li class="main-nav__item"><a href="#">Sign In</a></li>
               </ul>
@@ -210,16 +210,20 @@
                     <div class="form-field">
                       <label class="form__label form__label--small" for="qty-type">Qty&nbsp;Type</label>
                       <select name="qty-type" id="qty-type">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                        <option value="Pills (Tablets, Capsules, Etc)">Pills (Tablets, Capsules, Etc)</option>
+                        <option value="Milliliters (Liquid, Solution, Drops)">Milliliters (Liquid, Solution, Drops)</option>
+                        <option value="Inhalers">Inhalers</option>
+                        <option value="Injections">Injections</option>
+                        <option value="Patches">Patches</option>
+                        <option value="Tubes (Cream, Ointment, Lotion)">Tubes (Cream, Ointment, Lotion)</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
                   </div>
-                  <div class="form-fields-group__item">
+                  <div class="form-fields-group__item form-fields-group__item--short">
                     <div class="form-field">
                       <label class="form__label form__label--small" for="quantity">Quantity</label>
-                      <input type="text" name="quantity" id="quantity"/>
+                      <input type="number" name="quantity" id="quantity"/>
                     </div>
                   </div>
                 </div>
