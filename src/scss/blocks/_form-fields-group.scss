@@ -26,16 +26,33 @@
     }
   }
 
-  @media #{$sm} {
+  @media #{$md} {
     &--long {
       flex-wrap: wrap;
 
       .form-fields-group {
         &__item {
           width: 33.33%;
+
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
           
           &:nth-child(even) {
             margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$sm} {
+    &--long {
+      .form-fields-group {
+        &__item {
+
+          &:not(:last-child) {
+            margin-right: 12px;
           }
         }
       }
