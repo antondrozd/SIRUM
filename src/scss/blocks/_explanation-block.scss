@@ -129,7 +129,13 @@
         margin: 0 auto;
 
         &:last-of-type {
-          @include decorative-img('../img/pills6.png', 23%, 887px, -230px, -18%);
+          @include decorative-img(
+            '../img/pills6.png',
+            23%,
+            887px,
+            -230px,
+            -18%
+          );
         }
       }
 
@@ -206,6 +212,37 @@
     }
   }
 
+  &--org-d {
+    padding-top: 130px;
+
+    .explanation-block {
+      &__wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        @include decorative-img(
+          '../img/pills8.png',
+          227px,
+          652px,
+          -153px,
+          '',
+          '',
+          -7%
+        );
+      }
+
+      &__title {
+        @include h1();
+        margin-bottom: 28px;
+      }
+
+      &__text {
+        max-width: 85%;
+        text-align: center;
+      }
+    }
+  }
+
   @media #{$lg} {
     &--first {
       .explanation-block {
@@ -235,6 +272,16 @@
             &::after {
               width: 430px;
             }
+          }
+        }
+      }
+    }
+
+    &--org-d {
+      .explanation-block {
+        &__wrapper {
+          &::after {
+            width: 200px;
           }
         }
       }
@@ -307,6 +354,17 @@
       }
     }
 
+    &--org-d {
+      .explanation-block {
+        &__wrapper {
+          &::after {
+            left: -12%;
+            width: 200px;
+          }
+        }
+      }
+    }
+
     &__subtitle {
       margin-top: 50px;
       // font-size: 26px;
@@ -352,6 +410,18 @@
           &::after {
             width: 400px;
             left: -145px;
+          }
+        }
+      }
+    }
+
+    &--org-d {
+      .explanation-block {
+        &__wrapper {
+          &::after {
+            left: -12%;
+            top: -80px;
+            width: 130px;
           }
         }
       }
@@ -492,6 +562,18 @@
 
         &__text {
           padding-right: 0;
+        }
+      }
+    }
+
+    &--org-d {
+      padding: 80px 0;
+
+      .explanation-block {
+        &__wrapper {
+          &::after {
+            display: none;
+          }
         }
       }
     }

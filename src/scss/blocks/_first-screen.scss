@@ -41,6 +41,35 @@
     }
   }
 
+  &--org-d {
+    padding-bottom: 190px;
+
+    @include decorative-img(
+      '../img/org-donation-main.png',
+      627px,
+      100%,
+      '',
+      '',
+      -29px,
+      54.5%,
+      'right bottom'
+    );
+
+    .first-screen {
+      &__title {
+        max-width: 730px;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &__text {
+        max-width: 615px;
+      }
+    }
+  }
+
   &__title {
     @include h1();
     max-width: 825px;
@@ -72,9 +101,26 @@
     }
   }
 
+  &__btn {
+    position: relative;
+    z-index: 2;
+  }
+
   @media #{$lg} {
     padding-top: 120px;
     padding-bottom: 180px;
+
+    &--org-d {
+      .first-screen {
+        &__title {
+          max-width: 600px;
+        }
+
+        &__text {
+          max-width: 480px;
+        }
+      }
+    }
 
     &::after {
       left: 43%;
@@ -103,6 +149,11 @@
         left: 25%;
       }
     }
+    &--org-d {
+      &::after {
+        left: 45%;
+      }
+    }
 
     &__title {
       max-width: 750px;
@@ -128,6 +179,23 @@
         width: 450px;
       }
     }
+    &--org-d {
+      &::after {
+        right: 2%;
+        left: auto;
+        width: 42%;
+      }
+
+      .first-screen {
+        &__title {
+          max-width: 430px;
+        }
+
+        &__text {
+          max-width: 400px;
+        }
+      }
+    }
 
     &__title {
       max-width: 550px;
@@ -147,6 +215,14 @@
       left: auto;
       width: 312px;
       height: 351px;
+    }
+
+    &--org-d {
+      &::after {
+        right: 2%;
+        bottom: 0;
+        width: 66%;
+      }
     }
 
     &--ind-donation {
@@ -181,7 +257,7 @@
   @media #{$mobile-landscape} {
     &--ind-donation {
       padding-bottom: 303px;
-      
+
       &::after {
         bottom: -25px;
         width: 400px;
