@@ -2,6 +2,7 @@
   display: flex;
 
   &--long {
+    align-items: flex-end;
     margin-bottom: 46px;
     
     .form-fields-group {

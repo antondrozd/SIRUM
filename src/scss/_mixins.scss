@@ -33,7 +33,11 @@
 }
 
 @function reduce-number($number, $percentage) {
-  @return ($number - ($number / 100 * $percentage));
+  $result: $number - ($number / 100 * $percentage);
+  @if $result > 15.6 {
+    @return $result;
+  }
+  @return 15.6;
 }
 
 @mixin responsive-font($fs-base, $lh-base) {
@@ -86,28 +90,28 @@
 @mixin h4() {
   @include responsive-font(26, 46);
 
-  @media #{$xs} {
-    font-size: 12px;
-    line-height: 22px;
-  }
+  // @media #{$xs} {
+  //   font-size: 12px;
+  //   line-height: 22px;
+  // }
 }
 
 @mixin h5() {
   @include responsive-font(24, 42);
 
-  @media #{$xs} {
-    font-size: 12px;
-    line-height: 22px;
-  }
+  // @media #{$xs} {
+  //   font-size: 12px;
+  //   line-height: 22px;
+  // }
 }
 
 @mixin h6() {
   @include responsive-font(22, 42);
 
-  @media #{$xs} {
-    font-size: 12px;
-    line-height: 22px;
-  }
+  // @media #{$xs} {
+  //   font-size: 12px;
+  //   line-height: 22px;
+  // }
 }
 
 @mixin decorative-img(
