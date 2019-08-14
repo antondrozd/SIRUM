@@ -393,10 +393,16 @@ a, button {
         left: auto;
         width: 312px;
         height: 351px; }
-      .first-screen--org-d::after {
-        right: 2%;
-        bottom: 0;
-        width: 66%; }
+      .first-screen--org-d {
+        padding-bottom: 130px; }
+        .first-screen--org-d::after {
+          right: 5%;
+          bottom: 0;
+          width: 33%; }
+        .first-screen--org-d .first-screen__title {
+          max-width: 320px; }
+        .first-screen--org-d .first-screen__text {
+          max-width: 300px; }
       .first-screen--ind-donation {
         padding-bottom: 120px; }
         .first-screen--ind-donation::after {
@@ -422,6 +428,15 @@ a, button {
       .first-screen--ind-donation .first-screen__title {
         max-width: none; }
       .first-screen--ind-donation .first-screen__text {
+        max-width: none; }
+    .first-screen--org-d {
+      padding-bottom: 303px; }
+      .first-screen--org-d::after {
+        bottom: -25px;
+        width: 400px; }
+      .first-screen--org-d .first-screen__title {
+        max-width: none; }
+      .first-screen--org-d .first-screen__text {
         max-width: none; } }
 
 .main-content {
@@ -1539,6 +1554,9 @@ a, button {
   @media (max-width: 991px) {
     .check-donation {
       width: 100%; }
+      .check-donation--org-d-page .check-donation__btn {
+        min-width: 140px;
+        width: 100%; }
       .check-donation__column {
         -webkit-box-flex: 1;
             -ms-flex-positive: 1;
@@ -2267,6 +2285,10 @@ a, button {
     .contact-us {
       padding-top: 160px;
       padding-bottom: 64px; }
+      .contact-us--v2 {
+        padding-top: 80px; }
+        .contact-us--v2 .contact-us__text {
+          margin-bottom: 50px; }
       .contact-us__title {
         max-width: none;
         margin-bottom: 16px;
@@ -3271,11 +3293,18 @@ a, button {
     counter-increment: step; }
     .how-to-ind-d__step:last-child {
       padding-bottom: 0; }
+      .how-to-ind-d__step:last-child::before {
+        display: none; }
     .how-to-ind-d__step::before {
       content: '';
       position: absolute;
-      left: 10px;
+      top: 10px;
+      left: 77px;
+      width: 2px;
       height: 100%;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 145, 247, 0.3)), color-stop(65%, rgba(33, 145, 247, 0.3)), color-stop(65%, transparent), to(transparent));
+      background-image: linear-gradient(180deg, rgba(33, 145, 247, 0.3), rgba(33, 145, 247, 0.3) 65%, transparent 65%, transparent 100%);
+      background-size: 2px 15px;
       z-index: 0; }
   .how-to-ind-d__step-column {
     -webkit-box-sizing: border-box;
@@ -3324,6 +3353,7 @@ a, button {
       line-height: 27px;
       font-weight: 700;
       color: #2191f7;
+      background-color: #eef8ff;
       border: 1px solid #2191f7;
       border-radius: 50%; }
       @media (max-width: 1439px) {
@@ -3362,6 +3392,8 @@ a, button {
     min-width: 188px;
     margin: 0 auto; }
   @media (max-width: 1439px) {
+    .how-to-ind-d__step::before {
+      left: 75px; }
     .how-to-ind-d__step-title::before {
       left: -80px;
       width: 30px;
@@ -3372,12 +3404,16 @@ a, button {
       .how-to-ind-d::after {
         top: -50px;
         width: 12%; }
+      .how-to-ind-d__step::before {
+        left: 119px; }
       .how-to-ind-d__step-column:nth-child(odd) {
         padding-left: 20%;
         padding-right: 10%; } }
   @media (max-width: 991px) {
     .how-to-ind-d {
       background-image: none; }
+      .how-to-ind-d__step::before {
+        left: 25px; }
       .how-to-ind-d__step-column:nth-child(odd) {
         padding-left: 10%;
         padding-right: 5%; }
@@ -3387,21 +3423,26 @@ a, button {
       .how-to-ind-d__step-title::before {
         left: -60px; } }
   @media (max-width: 767px) {
-    .how-to-ind-d::after {
-      top: -20px;
-      width: 15%; }
-    .how-to-ind-d__step {
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      padding-bottom: 85px; }
-      .how-to-ind-d__step::before {
-        display: none; }
-    .how-to-ind-d__step-column {
-      padding: 0 !important;
-      width: 100%; }
-    .how-to-ind-d__step-title::before {
-      left: 0;
-      top: -50px; } }
+    .how-to-ind-d {
+      padding-top: 110px;
+      padding-bottom: 90px; }
+      .how-to-ind-d::after {
+        top: -20px;
+        width: 15%; }
+      .how-to-ind-d__title {
+        margin-bottom: 85px; }
+      .how-to-ind-d__step {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        padding-bottom: 85px; }
+        .how-to-ind-d__step::before {
+          display: none; }
+      .how-to-ind-d__step-column {
+        padding: 0 !important;
+        width: 100%; }
+      .how-to-ind-d__step-title::before {
+        left: 0;
+        top: -50px; } }
 
 .pick-program {
   padding-top: 140px;
@@ -3585,10 +3626,17 @@ a, button {
     .pick-program__item-inner {
       min-height: 165px; } }
   @media (max-width: 767px) {
-    .pick-program__item {
-      width: 100%;
-      margin-right: 0;
-      margin-left: 0; } }
+    .pick-program {
+      padding-top: 80px;
+      padding-bottom: 80px; }
+      .pick-program__wrapper::after {
+        top: -120px; }
+      .pick-program__list {
+        margin-bottom: 30px; }
+      .pick-program__item {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0; } }
 
 .faq {
   padding-top: 138px;
@@ -3737,9 +3785,13 @@ a, button {
         padding: 10%; } }
   @media (max-width: 767px) {
     .faq {
+      padding-top: 80px;
+      padding-bottom: 20px;
       background-image: none; }
       .faq__wrapper {
-        padding: 0; } }
+        padding: 0; }
+        .faq__wrapper::after {
+          top: -100px; } }
 
 .accordion {
   position: relative;
