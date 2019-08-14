@@ -1,0 +1,90 @@
+.faq {
+  padding-top: 138px;
+  padding-bottom: 90px;
+  color: $gray-200;
+  background-color: rgba(#c2f5c4, 0.4);
+  background-image: url('../img/faq-bg.png');
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: bottom 7% left 100%;
+
+  &__wrapper {
+    padding: 0 190px;
+
+    @include decorative-img(
+      '../img/pills11.png',
+      15%,
+      252px,
+      -268px,
+      '',
+      '',
+      -50px
+    );
+
+    @include decorative-img-2('../img/pills12.png', 14%, 281px, -202px, -73px);
+  }
+
+  &__title {
+    @include h2();
+    margin: 0;
+    margin-bottom: 62px;
+    font-family: $secondary-font;
+    text-align: center;
+  }
+
+  &__group-list {
+    @include ul-reset();
+    margin-bottom: 70px;
+    counter-reset: faq;
+  }
+
+  &__group-title {
+    @include responsive-font(26, 54);
+    margin: 0;
+    padding-bottom: 35px;
+    padding-left: 100px;
+    border-bottom: 1px solid rgba($gray-200, 0.2);
+
+    &--first {
+      @include decorative-img('../img/faq1.png', 76px, 140%, -54%, '', '', 0);
+    }
+
+    &--second {
+      @include decorative-img('../img/faq2.png', 82px, 90%, -7%, '', '', 0);
+    }
+
+    &--third {
+      @include decorative-img('../img/faq3.png', 64px, 80%, -14%, '', '', 0);
+    }
+  }
+
+  &__list-item {
+    padding: 30px 0;
+    counter-increment: faq;
+    position: relative;
+
+    &::before {
+      content: counter(faq) '.';
+      position: absolute;
+      @include h5();
+      font-weight: $bold;
+    }
+  }
+
+  @media #{$md} {
+    background-size: 110%;
+    background-position: bottom 5% left 60%;
+
+    &__wrapper {
+      padding: 10%;
+    }
+  }
+
+  @media #{$xs} {
+    background-image: none;
+
+    &__wrapper {
+      padding: 0;
+    }
+  }
+}

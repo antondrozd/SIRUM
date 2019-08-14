@@ -69,4 +69,16 @@ $(document).ready(function() {
 
     $(window).on('resize', () => mapObject.updateSize())
   }
+  
+  const accordions = Array.prototype.slice.call(
+    document.querySelectorAll('.accordion')
+  )
+
+  accordions.forEach(acc => {
+    acc.addEventListener('click', event => {
+      const panel = acc.querySelector('.accordion__panel')
+      if (panel.contains(event.target)) return
+      acc.classList.toggle('accordion--active')
+    })
+  })
 })

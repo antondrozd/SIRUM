@@ -1,0 +1,48 @@
+.accordion {
+  position: relative;
+  padding-right: 0;
+  border-bottom: 1px solid rgba($gray-200, 0.2);
+  cursor: pointer;
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding-left: 25px;
+    padding-right: 30px;
+    @include responsive-font(22, 42);
+
+    &::after {
+      content: '+';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-size: 30px;
+      color: rgba($gray-200, 0.7);
+      transform: translateY(-50%);
+    }
+  }
+
+  &__panel {
+    max-height: 0;
+    padding-left: 3%;
+    overflow: hidden;
+    @include responsive-font(22, 44);
+    color: rgba($gray-200, 0.6);
+    transition: all 0.3s easy;
+    cursor: auto;
+  }
+
+  &--active {
+    .accordion {
+      &__title {
+        &::after {
+          content: '-';
+        }
+      }
+
+      &__panel {
+        max-height: none;
+      }
+    }
+  }
+}

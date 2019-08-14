@@ -1,0 +1,184 @@
+.how-to-ind-d {
+  padding-top: 135px;
+  padding-bottom: 160px;
+  background-color: #eef8ff;
+  background-image: url('../img/how-to-d-bg.png');
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: top 37% left 60%;
+
+  @include decorative-img('../img/pills9.png', 14%, 533px, -258px, 3%);
+
+  &__title {
+    @include h2();
+    margin: 0;
+    margin-bottom: 153px;
+    font-family: $secondary-font;
+    text-align: center;
+  }
+
+  &__steps {
+    @include ul-reset();
+    margin-bottom: 40px;
+    counter-reset: step;
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 75px;
+    counter-increment: step;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      // width: 1px;
+      height: 100%;
+      // background-image: linear-gradient(
+      //   180deg,
+      //   #000,
+      //   #000 75%,
+      //   transparent 75%,
+      //   transparent 100%
+      // );
+      // border: 1px dashed $brand-color;
+      z-index: 0;
+    }
+  }
+
+  &__step-column {
+    box-sizing: border-box;
+    width: 50%;
+
+    &:nth-child(odd) {
+      padding-left: 12.5%;
+      padding-right: 180px;
+    }
+
+    &:nth-child(even) {
+      padding-right: 15%;
+      padding-left: 0.5%;
+    }
+  }
+
+  &__step-title {
+    @include responsive-font(24, 54);
+    position: relative;
+
+    &::before {
+      content: counter(step);
+      top: -4px;
+      position: absolute;
+      left: -106px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      font-family: $main-font;
+      @include responsive-font(20, 27);
+      font-weight: $bold;
+      color: $brand-color;
+      border: 1px solid $brand-color;
+      border-radius: 50%;
+    }
+  }
+
+  &__step-text {
+    @include responsive-font(18, 40);
+    margin: 0;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    display: block;
+    min-width: 188px;
+    margin: 0 auto;
+  }
+
+  @media #{$lg} {
+    &__step-title {
+      &::before {
+        left: -80px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  @media #{$md} {
+    background-position: top 37% left 10%;
+
+    &::after {
+      top: -50px;
+      width: 12%;
+    }
+
+    &__step-column {
+      &:nth-child(odd) {
+        padding-left: 20%;
+        padding-right: 10%;
+      }
+    }
+  }
+
+  @media #{$sm} {
+    background-image: none;
+
+    &__step-column {
+      &:nth-child(odd) {
+        padding-left: 10%;
+        padding-right: 5%;
+      }
+
+      &:nth-child(even) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    &__step-title {
+      &::before {
+        left: -60px;
+      }
+    }
+  }
+
+  @media #{$xs} {
+    &::after {
+      top: -20px;
+      width: 15%;
+    }
+
+    &__step {
+      flex-wrap: wrap;
+      padding-bottom: 85px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__step-column {
+      padding: 0 !important;
+      width: 100%;
+    }
+
+    &__step-title {
+      &::before {
+        left: 0;
+        top: -50px;
+      }
+    }
+  }
+}

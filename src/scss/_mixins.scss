@@ -33,7 +33,11 @@
 }
 
 @function reduce-number($number, $percentage) {
-  $result: $number - ($number / 100 * $percentage);
+  @return $number - ($number / 100 * $percentage);
+}
+
+@function reduce-font($number, $percentage) {
+  $result: reduce-number($number, $percentage);
   @if $result > 15.6 {
     @return $result;
   }
@@ -45,18 +49,18 @@
   line-height: #{$lh-base}px;
 
   @media #{$lg} {
-    font-size: #{(reduce-number($fs-base, 30))}px;
-    line-height: #{(reduce-number($lh-base, 30))}px;
+    font-size: #{(reduce-font($fs-base, 30))}px;
+    line-height: #{(reduce-font($lh-base, 30))}px;
   }
 
   @media #{$md} {
-    font-size: #{(reduce-number($fs-base, 35))}px;
-    line-height: #{(reduce-number($lh-base, 35))}px;
+    font-size: #{(reduce-font($fs-base, 35))}px;
+    line-height: #{(reduce-font($lh-base, 35))}px;
   }
 
   @media #{$sm} {
-    font-size: #{(reduce-number($fs-base, 40))}px;
-    line-height: #{(reduce-number($lh-base, 40))}px;
+    font-size: #{(reduce-font($fs-base, 40))}px;
+    line-height: #{(reduce-font($lh-base, 40))}px;
   }
 }
 
@@ -194,6 +198,59 @@
 
     @if $position != '' {
       background-position: #{$position};
+    }
+  }
+}
+
+@mixin list-item-position($line-height, $top-percentage) {
+  $base: reduce-number($line-height, $top-percentage);
+
+  top: #{$base}px;
+
+  @media #{$lg} {
+    top: #{reduce-number($base, 30)}px;
+  }
+
+  @media #{$md} {
+    top: #{reduce-number($base, 35)}px;
+  }
+
+  @media #{$sm} {
+    top: #{reduce-number($base, 40)}px;
+  }
+}
+
+@mixin list-item($line-height) {
+  $base: reduce-number($line-height, 62);
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: #{$base}px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background-color: $brand-color;
+    border-radius: 50%;
+  }
+
+  @media #{$lg} {
+    &::before {
+      top: #{reduce-number($base, 30)}px;
+    }
+  }
+
+  @media #{$md} {
+    &::before {
+      top: #{reduce-number($base, 35)}px;
+    }
+  }
+
+  @media #{$sm} {
+    &::before {
+      top: #{reduce-number($base, 40)}px;
     }
   }
 }

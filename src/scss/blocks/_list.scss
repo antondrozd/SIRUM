@@ -1,22 +1,40 @@
 .list {
   @include ul-reset();
 
+  &--medium {
+    .list {
+      &__item {
+        margin-bottom: 20px;
+        @include responsive-font(18, 34);
+      }
+    }
+  }
+
   &__item {
     @include h6();
     position: relative;
+    margin-bottom: 5px;
     padding-left: 15px;
+    @include responsive-font(18, 40);
+    // font-size: 18px;
+    // line-height: 40px;
     text-align: left;
+    @include list-item(40);
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: $brand-color;
-      transform: translateY(-50%);
+    &:last-child {
+      margin-bottom: 0;
     }
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 0;
+    //   width: 4px;
+    //   height: 4px;
+    //   border-radius: 50%;
+    //   background-color: $brand-color;
+    //   transform: translateY(-50%);
+    // }
   }
 }

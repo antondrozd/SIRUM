@@ -1,0 +1,114 @@
+.pick-program {
+  padding-top: 140px;
+  padding-bottom: 160px;
+
+  &__wrapper {
+    @include decorative-img(
+      '../img/pills10.png',
+      12%,
+      294px,
+      -250px,
+      '',
+      '',
+      -7%
+    );
+  }
+
+  &__title {
+    @include h2();
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: $secondary-font;
+    text-align: center;
+  }
+
+  &__text {
+    @include h4();
+    margin: 0;
+    padding: 0 9%;
+    text-align: center;
+  }
+
+  &__list {
+    @include ul-reset();
+    display: flex;
+    margin-top: 68px;
+    margin-bottom: 90px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    margin: 0 10px;
+    padding: 35px 15px;
+    box-shadow: 0 0 60px 0 rgba(151, 155, 163, 0.12);
+  }
+
+  &__item-title {
+    margin: 0;
+    @include responsive-font(20, 34);
+    font-weight: $bold;
+    text-align: center;
+  }
+
+  &__item-text {
+    min-height: 20px;
+    margin: 0;
+    @include responsive-font(22, 34);
+    text-align: center;
+  }
+
+  &__item-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 223px;
+    margin-bottom: 40px;
+  }
+
+  &__item-price {
+    display: block;
+    padding-bottom: 34px;
+    @include responsive-font(30, 33);
+    text-align: center;
+    font-weight: $bold;
+    color: $brand-color;
+    border-bottom: 1px solid $brand-color;
+
+    span {
+      @include responsive-font(24, 33);
+    }
+  }
+
+  &__btn {
+    display: block;
+    min-width: 188px;
+    margin: 0 auto;
+  }
+
+  @media #{$sm} {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      box-sizing: border-box;
+      width: 320px;
+      margin-bottom: 30px;
+    }
+
+    &__item-inner {
+      min-height: 165px;
+    }
+  }
+
+  @media #{$xs} {
+    &__item {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}

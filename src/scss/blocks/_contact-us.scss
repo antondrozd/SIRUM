@@ -2,6 +2,16 @@
   padding-top: 243px;
   padding-bottom: 158px;
 
+  &--v2 {
+    padding-top: 152px;
+
+    .contact-us {
+      &__text {
+        margin-bottom: 118px;
+      }
+    }
+  }
+
   &__wrapper {
     width: 77%;
     margin: 0 auto;
