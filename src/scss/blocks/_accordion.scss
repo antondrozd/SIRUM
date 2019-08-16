@@ -27,7 +27,7 @@
     padding-left: 3%;
     overflow: hidden;
     @include responsive-font(22, 44);
-    color: rgba($gray-200, 0.6);
+    color: $gray-200;
     transition: all 0.3s easy;
     cursor: auto;
   }
@@ -35,6 +35,8 @@
   &--active {
     .accordion {
       &__title {
+        margin-bottom: 30px;
+        
         &::after {
           content: '-';
         }
