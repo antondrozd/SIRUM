@@ -24,7 +24,7 @@
     "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-custom-select": "^1.6.3",
     "jvectormap-next": "^3.0.0",
     "swipeshow": "^0.10.8"
